@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:training_dart/app_controller.dart';
 import './home_page.dart';
 
 class MyApp extends StatelessWidget {
-  final String title;
-
-  const MyApp({Key? key, required this.title}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark(),
-      home: HomePage(),
+    return AnimatedBuilder(
+      animation: AppController.instance,
+      builder: (context, child) {
+        return MaterialApp(
+          theme: ThemeData(
+            primarySwatch: Colors.amber,
+            brightness: AppController.instance.isDarkTheme
+                ? Brightness.dark
+                : Brightness.light,
+          ),
+          home: HomePage(),
+        );
+      },
     );
   }
 }

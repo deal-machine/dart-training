@@ -9,6 +9,8 @@ A Flutter project to study many concepts around this tech. :books:
   <li>Stateless Widget</li>
   <li>Material App</li>
   <li>Stateful Widget</li>
+  <li>Scaffold</li>
+  <li>Single Render and Multi Render</li>
 </ul>
 
 ## Getting Started :electric_plug:
