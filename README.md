@@ -1,8 +1,17 @@
-# training_dart
+# training_dart :wrench:
 
-A new Flutter project.
+A Flutter project to study many concepts around this tech. :books:
 
-## Getting Started
+<ul style="list-style-type:circle">
+  <li>Flutter Tech and Community</li>
+  <li>Dart Concepts</li>
+  <li>Widgets</li>
+  <li>Stateless Widget</li>
+  <li>Material App</li>
+  <li>Stateful Widget</li>
+</ul>
+
+## Getting Started :electric_plug:
 
 This project is a starting point for a Flutter application.
 
