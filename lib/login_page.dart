@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:training_dart/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -49,8 +50,16 @@ class _LoginPageState extends State<LoginPage> {
                   style: ButtonStyle(
                     alignment: Alignment.center,
                   ),
-                  onPressed: () =>
-                      {print('email: $email' + ' password: $password')},
+                  onPressed: () => {
+                    if (email == '95deal@gmail.com' && password == '12345')
+                      {
+                        print('email: $email password: $password'),
+                        Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(builder: (context) => HomePage()))
+                      }
+                    else
+                      {print("EMAIL OU SENHA INCORRETO.")}
+                  },
                   child: const Text('Login'),
                 )
               ],
