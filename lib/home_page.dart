@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int count = 0;
-  bool turnTheme = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +18,7 @@ class HomePageState extends State<HomePage> {
         title: Text('home'),
       ),
       body: Center(
-        child: Switch(
-            value: AppController.instance.isDarkTheme,
-            onChanged: (value) {
-              AppController.instance.changeTheme();
-            }),
+        child: CustomSwitch(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => setState(() {
@@ -33,5 +28,16 @@ class HomePageState extends State<HomePage> {
         backgroundColor: (Colors.amber),
       ),
     );
+  }
+}
+
+class CustomSwitch extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+        value: AppController.instance.isDarkTheme,
+        onChanged: (value) {
+          AppController.instance.changeTheme();
+        });
   }
 }
