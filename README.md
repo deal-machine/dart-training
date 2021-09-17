@@ -11,6 +11,7 @@ A Flutter project to study many concepts around this tech. :books:
   <li>Stateful Widget</li>
   <li>Scaffold</li>
   <li>Single Render and Multi Render</li>
+  <li>Navigator and Named Routes</li>
 </ul>
 
 ## Getting Started :electric_plug:
