@@ -33,6 +33,19 @@ class _LoginPageState extends State<LoginPage> {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Login',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                            Icon(Icons.security)
+                          ],
+                        ),
+                      ),
                       TextField(
                         onChanged: (text) {
                           email = text;
@@ -70,7 +83,10 @@ class _LoginPageState extends State<LoginPage> {
                           else
                             {print("EMAIL OU SENHA INCORRETO.")}
                         },
-                        child: const Text('Login'),
+                        child: Icon(
+                          Icons.login,
+                          size: 20,
+                        ),
                       )
                     ],
                   ),
